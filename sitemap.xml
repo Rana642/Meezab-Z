@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.meezabz.com/</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.meezabz.com/products.html</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.meezabz.com/about.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.meezabz.com/solutions.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.meezabz.com/distributors.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.meezabz.com/contact.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/network.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.meezabz.com/principal-reefco.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.meezabz.com/principal-lexington.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.meezabz.com/gallery.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.meezabz.com/product-aminoreef-sol.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-recal-fos.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-reeftox-sol.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-reevit-ad3ek-sol.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-reevit-e-se-150.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-diureef-plus.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-laxi-zyme-plus.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-fegatosim.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/product-mentofresh.html</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.meezabz.com/privacy.html</loc><lastmod>2026-06-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.meezabz.com/terms.html</loc><lastmod>2026-06-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://meezabz.com/</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://meezabz.com/products</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://meezabz.com/about</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meezabz.com/solutions</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meezabz.com/distributors</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meezabz.com/contact</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/network</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://meezabz.com/principal-reefco</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://meezabz.com/principal-lexington</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://meezabz.com/gallery</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://meezabz.com/product-aminoreef-sol</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-recal-fos</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-reeftox-sol</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-reevit-ad3ek-sol</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-reevit-e-se-150</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-diureef-plus</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-laxi-zyme-plus</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-fegatosim</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/product-mentofresh</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://meezabz.com/privacy</loc><lastmod>2026-06-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://meezabz.com/terms</loc><lastmod>2026-06-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
