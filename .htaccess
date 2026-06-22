@@ -1,0 +1,63 @@
+# ==========================================================================
+# Meezab Z. International — Security & Performance
+# For Apache / LiteSpeed / cPanel shared hosting
+# ==========================================================================
+
+# --- Force HTTPS (encrypts all traffic; mitigates MITM & session sniffing) ---
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- (Optional) force canonical www host. Uncomment if you use www.meezabz.com ---
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Block access to hidden files/folders (.git, .env, etc.) except .well-known ---
+RewriteRule "(^|/)\.(?!well-known)" - [F]
+
+# --- Security response headers ---
+<IfModule mod_headers.c>
+  # Force HTTPS in the browser for 1 year (HSTS) — MITM protection
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # Stop browsers MIME-sniffing responses (malware / wrong-type tricks)
+  Header always set X-Content-Type-Options "nosniff"
+  # Don't allow your site to be framed by others (clickjacking)
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # Limit referrer leakage to other sites
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Disable browser features the site doesn't use
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+  # Content Security Policy — XSS / injection / defacement hardening
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.openstreetmap.org; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  # Remove version/fingerprint banners
+  Header unset X-Powered-By
+</IfModule>
+
+# --- Disable directory listing (info disclosure / directory traversal) ---
+Options -Indexes
+
+# --- Block source, build & backup files from being served ---
+<FilesMatch "\.(htaccess|htpasswd|py|md|json|lock|zip|sh|log|ini|bak|map)$">
+  Require all denied
+</FilesMatch>
+
+# --- Hide server version ---
+ServerSignature Off
+
+# --- Gzip compression (speed) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Browser caching (speed; instant repeat visits) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

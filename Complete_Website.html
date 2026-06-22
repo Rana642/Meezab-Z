@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meezab Z. International — Complete Website (offline preview)</title>
+<style>
+  :root{--teal:#047887;--deep:#03333B;--soft:#D3F0F0}
+  *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#F1FBFB}
+  .bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--deep);color:#fff;padding:12px 18px}
+  .bar b{letter-spacing:.06em} .bar i{font-style:normal;opacity:.7;font-size:.85rem}
+  select{padding:9px 12px;border-radius:9px;border:0;font:inherit;min-width:240px}
+  .frame{width:100%;height:calc(100vh - 56px);border:0;background:#fff}
+  a.open{color:#01B1AE;font-weight:700;text-decoration:none;margin-left:auto}
+</style></head>
+<body>
+  <div class="bar">
+    <b>MEEZAB Z</b><i>Complete Website — offline preview</i>
+    <label for="sel" style="font-size:.85rem;opacity:.85">Page:</label>
+    <select id="sel" onchange="document.getElementById('f').src=this.value"><option value="index.html">Home</option><option value="about.html">About</option><option value="solutions.html">Solutions</option><option value="products.html">Products</option><option value="distributors.html">Distributors</option><option value="contact.html">Contact</option><option value="network.html">Distribution Network</option><option value="gallery.html">Gallery</option><option value="principal-reefco.html">Principal — REEFCO</option><option value="principal-lexington.html">Principal — Lexington</option><option value="privacy.html">Privacy</option><option value="terms.html">Terms</option><option value="product-aminoreef-sol.html">Product — Aminoreef Sol</option><option value="product-recal-fos.html">Product — Recal Fos</option><option value="product-reeftox-sol.html">Product — Reeftox Sol</option><option value="product-reevit-ad3ek-sol.html">Product — Reevit AD₃EK Sol</option><option value="product-reevit-e-se-150.html">Product — Reevit E-Se 150</option><option value="product-diureef-plus.html">Product — Diureef Plus</option><option value="product-laxi-zyme-plus.html">Product — Laxi-Zyme Plus</option><option value="product-fegatosim.html">Product — Fegatosim</option><option value="product-mentofresh.html">Product — Mentofresh</option></select>
+    <a class="open" id="ext" href="index.html" target="_blank" rel="noopener">Open page in new tab ↗</a>
+  </div>
+  <iframe class="frame" id="f" src="index.html" title="Page preview"></iframe>
+  <script>
+    var sel=document.getElementById('sel'),ext=document.getElementById('ext');
+    sel.addEventListener('change',function(){ext.href=sel.value;});
+  </script>
+</body></html>
