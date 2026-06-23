@@ -1,0 +1,36 @@
+name: Deploy to cPanel
+
+# Auto-deploy: whenever main is updated, SSH into the Namecheap cPanel
+# server and fast-forward public_html to match the latest commit.
+# Requires 4 repository secrets (Settings -> Secrets and variables -> Actions):
+#   CPANEL_SSH_HOST  e.g. server125.web-hosting.com
+#   CPANEL_SSH_USER  e.g. meezhutu
+#   CPANEL_SSH_PORT  e.g. 21098
+#   CPANEL_SSH_KEY   the PRIVATE key (no passphrase) authorized on the server
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:        # lets you trigger a deploy manually from the Actions tab
+
+concurrency:
+  group: cpanel-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync public_html to origin/main over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.CPANEL_SSH_HOST }}
+          username: ${{ secrets.CPANEL_SSH_USER }}
+          port: ${{ secrets.CPANEL_SSH_PORT }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          script: |
+            set -e
+            cd ~/public_html
+            git fetch --prune origin
+            git reset --hard origin/main
+            echo "Deployed commit: $(git rev-parse --short HEAD)"
