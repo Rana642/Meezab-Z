@@ -6,7 +6,8 @@ name: Deploy to cPanel
 #   CPANEL_SSH_HOST  e.g. server125.web-hosting.com
 #   CPANEL_SSH_USER  e.g. meezhutu
 #   CPANEL_SSH_PORT  e.g. 21098
-#   CPANEL_SSH_KEY   the PRIVATE key (no passphrase) authorized on the server
+#   CPANEL_SSH_KEY        the PRIVATE key authorized on the server
+#   CPANEL_SSH_PASSPHRASE the passphrase set when the key was generated
 
 on:
   push:
@@ -28,6 +29,7 @@ jobs:
           username: ${{ secrets.CPANEL_SSH_USER }}
           port: ${{ secrets.CPANEL_SSH_PORT }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
+          passphrase: ${{ secrets.CPANEL_SSH_PASSPHRASE }}
           script: |
             set -e
             cd ~/public_html
