@@ -1,0 +1,10 @@
+# Archives — keep source files tracked, not zipped snapshots
+*.zip
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Claude Code session settings (machine-specific)
+.claude/settings.local.json
