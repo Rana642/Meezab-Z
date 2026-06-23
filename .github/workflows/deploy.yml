@@ -6,8 +6,10 @@ name: Deploy to cPanel
 #
 # Required repository secrets (Settings -> Secrets and variables -> Actions):
 #   FTP_SERVER    e.g. server125.web-hosting.com
-#   FTP_USERNAME  the FTP account login, e.g. deploy@meezabz.com
-#   FTP_PASSWORD  that FTP account's password
+#   FTP_USERNAME  the MAIN cPanel account user, e.g. meezhutu
+#   FTP_PASSWORD  that account's password
+# server-dir is public_html/ because the main account's FTP root is the
+# home directory (/home/<user>), and the site lives in public_html.
 
 on:
   push:
@@ -34,7 +36,7 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./
-          server-dir: ./
+          server-dir: public_html/
           exclude: |
             **/.git*
             **/.git*/**
