@@ -15,6 +15,19 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # --- Block access to hidden files/folders (.git, .env, etc.) except .well-known ---
 RewriteRule "(^|/)\.(?!well-known)" - [F]
 
+# --- Clean URLs: hide the ".html" extension ---
+# Send /index.html to the bare home page "/"
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+# Send /page.html to /page (301) so the address bar shows the clean URL
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+# Internally serve /page from the real /page.html file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
 # --- Security response headers ---
 <IfModule mod_headers.c>
   # Force HTTPS in the browser for 1 year (HSTS) — MITM protection
